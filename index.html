@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <iframe
+    id="videoFrame"
+    width="1110"
+    height="624"
+    src="https://www.youtube.com/embed/AJtyT5zp8tQ"
+    title="Spider-Man PS5 Remastered - The Amazing Suit Beautiful Free Roam & Combat - 4K Ray Tracing Gameplay"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+
+  <script>
+    var player;
+    var videoFrame = document.getElementById('videoFrame');
+
+    // Replace 'YOUR_VIDEO_ID' with the actual video ID
+    var videoId = 'AJtyT5zp8tQ';
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player(videoFrame, {
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Define your condition (e.g., true or false)
+      var conditionIsTrue = true; // Replace with your condition
+
+      // Control playback based on your condition
+      if (conditionIsTrue) {
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  </script>
+</body>
+</html>
